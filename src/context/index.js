@@ -34,7 +34,7 @@ class MyProvider extends Component {
         }else {
            this.setState({
                stage: 2
-           },() => {
+           }, () => {
                setTimeout(() => {
                    this.generateLooser()
                }, 2000)
