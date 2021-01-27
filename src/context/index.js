@@ -22,8 +22,13 @@ class MyProvider extends Component {
     }
     removeHandler = (id) => {
         const newArray = this.state.players;
-        newArray.splice(id, 1);
-        this.setState({players: newArray})
+        // newArray.splice(id, 1);
+        const news = newArray.filter((player, index) => {
+            if(index !== id ) {
+                return player
+            }
+        });
+        this.setState({players: news})
     } 
     nextHandler = () => {
         const { players } = this.state;
